@@ -1,0 +1,15 @@
+/* Mantiene legibles los cuadros anchos en pantallas pequeñas. */
+.table-responsive {
+  margin-bottom: 1rem;
+}
+
+.table-responsive > table {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  min-width: 34rem;
+}
+
+.table-responsive th,
+.table-responsive td {
+  vertical-align: top;
+}
