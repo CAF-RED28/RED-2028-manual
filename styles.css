@@ -13,3 +13,91 @@
 .table-responsive td {
   vertical-align: top;
 }
+
+/* Paleta del sitio del manual inspirada en CAF. */
+@media screen {
+  body.quarto-light {
+    --red28-paper: #f4f8fa;
+    --red28-sidebar: #eaf2f6;
+    --red28-ink: #283a49;
+    --red28-blue: #244d75;
+    --red28-green: #699f32;
+    --red28-line: #cfdee6;
+    --bs-body-bg: var(--red28-paper);
+    --bs-body-color: var(--red28-ink);
+    --bs-link-color-rgb: 23, 100, 148;
+    --bs-link-hover-color-rgb: 36, 77, 117;
+    background-color: var(--red28-paper);
+  }
+
+  #quarto-sidebar,
+  #quarto-header .quarto-secondary-nav {
+    background-color: var(--red28-sidebar);
+  }
+
+  #quarto-sidebar {
+    border-inline-end: 1px solid var(--red28-line);
+    padding-inline-end: .9rem;
+  }
+
+  #quarto-sidebar .sidebar-title a,
+  #quarto-document-content :is(h1, h2, h3, h4, h5, h6),
+  #quarto-margin-sidebar #TOC h2 {
+    color: var(--red28-blue);
+  }
+
+  #quarto-sidebar .sidebar-link {
+    border-inline-start: .2rem solid transparent;
+    border-radius: .3rem;
+    color: var(--red28-ink);
+    padding: .36rem .55rem;
+  }
+
+  #quarto-sidebar .sidebar-link:hover,
+  #quarto-sidebar .sidebar-link.active {
+    background-color: #dceaf2;
+    color: var(--red28-blue);
+  }
+
+  #quarto-sidebar .sidebar-link.active {
+    border-inline-start-color: var(--red28-green);
+    font-weight: 600;
+  }
+
+  #quarto-search .aa-Form {
+    border-color: #aec7d5;
+  }
+
+  #quarto-search .aa-Form:focus-within {
+    outline: 2px solid var(--red28-blue);
+    outline-offset: 2px;
+  }
+
+  #title-block-header {
+    background: linear-gradient(124deg, #fff 15%, #edf5f8 70%, #e2eef4);
+    border: 1px solid var(--red28-line);
+    border-inline-start: .25rem solid var(--red28-green);
+    border-radius: .4rem;
+    padding: clamp(1rem, 2vw, 1.65rem);
+  }
+
+  #title-block-header .subtitle,
+  #quarto-margin-sidebar #TOC .nav-link.active {
+    color: var(--red28-blue);
+  }
+
+  #quarto-margin-sidebar #TOC .nav-link.active {
+    border-inline-start-color: var(--red28-green);
+  }
+
+  .table-responsive > table {
+    --bs-table-bg: #fff;
+    --bs-table-color: var(--red28-ink);
+    --bs-table-border-color: var(--red28-line);
+  }
+
+  .table-responsive > table > thead {
+    --bs-table-bg: var(--red28-sidebar);
+    --bs-table-color: var(--red28-blue);
+  }
+}
