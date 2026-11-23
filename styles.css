@@ -1,3 +1,5 @@
+@import url("images/montserrat.css");
+
 /* Mantiene legibles los cuadros anchos en pantallas pequeñas. */
 .table-responsive {
   margin-bottom: 1rem;
@@ -100,4 +102,18 @@
     --bs-table-bg: var(--red28-sidebar);
     --bs-table-color: var(--red28-blue);
   }
+}
+
+/* Tipografía común para la lectura y la navegación del manual. */
+:root {
+  --red28-typeface: "Montserrat", Arial, sans-serif;
+  --bs-font-sans-serif: var(--red28-typeface);
+  --bs-body-font-family: var(--red28-typeface);
+  --bs-font-monospace: var(--red28-typeface);
+  --aa-font-family: var(--red28-typeface);
+}
+
+body,
+p {
+  font-family: var(--red28-typeface);
 }
