@@ -114,6 +114,7 @@
 }
 
 body,
-p {
+p,
+.lead {
   font-family: var(--red28-typeface);
 }
