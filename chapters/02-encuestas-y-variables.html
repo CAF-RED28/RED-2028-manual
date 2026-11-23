@@ -204,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Los 14 bloques siguientes organizan las variables de ambos tipos de encuesta. El manual documenta 116 variables temáticas y 13 identificadores técnicos: 129 variables en total. El conteo considera cada nombre una sola vez, aunque un cuadro agrupe varios nombres. El bloque de Ingresos incorpora 11 variables de componentes de ingreso, incluida la desagregación contributiva y no contributiva de y_jub, y dos agregados del hogar. El indicador aporte_jubilacion se documenta en Mercado Laboral y no se duplica en Ingresos. Además, tasa_jefatura se calcula para grupos de población y no se incluye en el conteo de variables de microdatos. Las marcas de imputación y los resultados derivados se documentan en los criterios metodológicos.</p>
+<p>Los 14 bloques siguientes organizan las variables de ambos tipos de encuesta. El manual documenta 116 variables temáticas y 13 identificadores técnicos: 129 variables en total. El conteo considera cada nombre una sola vez, aunque un cuadro agrupe varios nombres. El bloque de Ingresos incorpora 11 variables de componentes de ingreso, incluida la desagregación contributiva y no contributiva de <code class="red28-variable">y_jub</code>, y dos agregados del hogar. El indicador <code class="red28-variable">aporte_jubilacion</code> se documenta en Mercado Laboral y no se duplica en Ingresos. Además, <code class="red28-variable">tasa_jefatura</code> se calcula para grupos de población y no se incluye en el conteo de variables de microdatos. Las marcas de imputación y los resultados derivados se documentan en los criterios metodológicos.</p>
 <p><strong>Cuadro 3. Bloques de variables y cantidad</strong></p>
 <div class="table-responsive">
 <table class="caption-top table">
@@ -307,12 +307,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Los identificadores técnicos permiten reconocer el hogar, la persona, la vivienda, el país, la encuesta, el año, el período, la localización y el ponderador existente. Se presentan aparte de los 14 bloques temáticos y no se cuentan dentro de Demografía y estructura del hogar.</p>
 <section id="identificación-geográfica" class="level2">
 <h2 class="anchored" data-anchor-id="identificación-geográfica">Identificación geográfica</h2>
-<p>geo_nivel1_orig, geo_nivel2_orig y geo_nivel3_orig registran, respectivamente, la división territorial principal, la división intermedia y la unidad más fina publicada por la encuesta. La denominación depende de cada país: los niveles pueden ser regiones, estados, provincias, departamentos, municipios, distritos, parroquias, localidades o ciudades. El nombre no determina el nivel; se conserva la jerarquía territorial de la fuente.</p>
-<p>Los códigos se almacenan como texto, incluidos ceros iniciales, junto con su etiqueta, nivel, fuente y vigencia territorial. geo_nivel2_orig debe pertenecer a geo_nivel1_orig y geo_nivel3_orig al nivel superior correspondiente cuando la jerarquía esté disponible. Si un código no es único a escala nacional, se interpreta junto con pais y sus niveles superiores. Los niveles no publicados quedan faltantes; no se completan repitiendo códigos más agregados ni se reconstruyen áreas suprimidas o anonimizadas.</p>
-<p>geo_nivel3_orig recoge la máxima desagregación territorial publicada; puede corresponder a un nivel menor que el tercer orden administrativo. Cuando una ciudad, localidad o aglomerado cruza límites administrativos, se conserva su clasificación original y se documenta su relación territorial sin forzar una cadena anidada. region_orig mantiene por separado el dominio o agrupación geográfica original de la encuesta, y urbano conserva la clasificación urbano/rural.</p>
-<p>La disponibilidad de un código no implica representatividad para esa unidad. Antes de producir resultados por provincia, departamento, municipio o ciudad se verifican dominios de estimación, diseño muestral y cambios de límites entre años. Estos identificadores describen residencia actual y se distinguen de pais_nacimiento, residencia_1anio y residencia_5anios.</p>
+<p><code class="red28-variable">geo_nivel1_orig</code>, <code class="red28-variable">geo_nivel2_orig</code> y <code class="red28-variable">geo_nivel3_orig</code> registran, respectivamente, la división territorial principal, la división intermedia y la unidad más fina publicada por la encuesta. La denominación depende de cada país: los niveles pueden ser regiones, estados, provincias, departamentos, municipios, distritos, parroquias, localidades o ciudades. El nombre no determina el nivel; se conserva la jerarquía territorial de la fuente.</p>
+<p>Los códigos se almacenan como texto, incluidos ceros iniciales, junto con su etiqueta, nivel, fuente y vigencia territorial. <code class="red28-variable">geo_nivel2_orig</code> debe pertenecer a <code class="red28-variable">geo_nivel1_orig</code> y <code class="red28-variable">geo_nivel3_orig</code> al nivel superior correspondiente cuando la jerarquía esté disponible. Si un código no es único a escala nacional, se interpreta junto con pais y sus niveles superiores. Los niveles no publicados quedan faltantes; no se completan repitiendo códigos más agregados ni se reconstruyen áreas suprimidas o anonimizadas.</p>
+<p><code class="red28-variable">geo_nivel3_orig</code> recoge la máxima desagregación territorial publicada; puede corresponder a un nivel menor que el tercer orden administrativo. Cuando una ciudad, localidad o aglomerado cruza límites administrativos, se conserva su clasificación original y se documenta su relación territorial sin forzar una cadena anidada. <code class="red28-variable">region_orig</code> mantiene por separado el dominio o agrupación geográfica original de la encuesta, y urbano conserva la clasificación urbano/rural.</p>
+<p>La disponibilidad de un código no implica representatividad para esa unidad. Antes de producir resultados por provincia, departamento, municipio o ciudad se verifican dominios de estimación, diseño muestral y cambios de límites entre años. Estos identificadores describen residencia actual y se distinguen de <code class="red28-variable">pais_nacimiento</code>, <code class="red28-variable">residencia_1anio</code> y <code class="red28-variable">residencia_5anios</code>.</p>
 <p>Los sufijos internacionales identifican la referencia conceptual utilizada para construir las variables: _ONU remite a la Organización de las Naciones Unidas; _JMP, al programa conjunto de monitoreo de la Organización Mundial de la Salud y UNICEF; y _OMS, a la Organización Mundial de la Salud. Señalan el origen de una definición, clasificación o criterio de medición. Los datos se obtienen de las encuestas procesadas y los nombres de las variables son propios del proyecto.</p>
-<p>Las categorías se asignan al comprobar que las preguntas originales contienen la información requerida por la referencia. Cuando esta no prescribe códigos para los microdatos, el manual utiliza una numeración operativa propia. MICS se utiliza como antecedente para la agrupación de materiales, pero las variables material_pared, material_techo y material_piso no llevan el sufijo _MICS. El sufijo _orig indica que se conservan los códigos y las etiquetas de la encuesta original. Las fuentes, los criterios adoptados y sus límites se explican en la sección metodológica.</p>
+<p>Las categorías se asignan al comprobar que las preguntas originales contienen la información requerida por la referencia. Cuando esta no prescribe códigos para los microdatos, el manual utiliza una numeración operativa propia. MICS se utiliza como antecedente para la agrupación de materiales, pero las variables <code class="red28-variable">material_pared</code>, <code class="red28-variable">material_techo</code> y <code class="red28-variable">material_piso</code> no llevan el sufijo _MICS. El sufijo _orig indica que se conservan los códigos y las etiquetas de la encuesta original. Las fuentes, los criterios adoptados y sus límites se explican en la sección metodológica.</p>
 <p>En las variables binarias, 0 indica ausencia observada y 1 presencia. En todos los cuadros, la falta de respuesta, la ausencia de la pregunta y la condición de no aplicable se registran por separado y no se sustituyen por cero. Los montos de vivienda se conservan en la moneda y el período originales de la encuesta. Los componentes de ingresos se expresan en moneda local corriente y en equivalentes mensuales, conservando el monto y el período originales para su trazabilidad.</p>
 </section>
 <section id="demografía-y-estructura-del-hogar" class="level2">
@@ -335,152 +335,152 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>parentesco</td>
+<td><code class="red28-variable">parentesco</code></td>
 <td>1=jefe<br>2=cónyuge<br>3=hijo/a<br>4=padre/madre/suegro<br>5=otro pariente<br>6=no pariente</td>
 <td>Relación con el/la jefe/a de hogar.</td>
 </tr>
 <tr class="even">
-<td>mujer</td>
+<td><code class="red28-variable">mujer</code></td>
 <td>0=hombre<br>1=mujer</td>
 <td>Indicador binario de sexo.</td>
 </tr>
 <tr class="odd">
-<td>nacimiento</td>
+<td><code class="red28-variable">nacimiento</code></td>
 <td>Año (ej. 1985)</td>
 <td>Año de nacimiento</td>
 </tr>
 <tr class="even">
-<td>edad</td>
+<td><code class="red28-variable">edad</code></td>
 <td>Continua 0–108</td>
 <td>Edad en años cumplidos.</td>
 </tr>
 <tr class="odd">
-<td>edad_grp</td>
+<td><code class="red28-variable">edad_grp</code></td>
 <td>1=15–24<br>2=25–49<br>3=50+</td>
 <td>Tramos de edad para la PEA. Missing si &lt;15.</td>
 </tr>
 <tr class="even">
-<td>hijo</td>
+<td><code class="red28-variable">hijo</code></td>
 <td>0/1</td>
 <td>Identifica si la persona es hijo/a del jefe/a de hogar.</td>
 </tr>
 <tr class="odd">
-<td>hijo_menor12</td>
+<td><code class="red28-variable">hijo_menor12</code></td>
 <td>0/1</td>
 <td>Identifica si la persona es hijo/a del jefe/a de hogar y tiene menos de 12 años.</td>
 </tr>
 <tr class="even">
-<td>nro_hijos12</td>
+<td><code class="red28-variable">nro_hijos12</code></td>
 <td>Continua 0+</td>
 <td>Número de hijos/as menores de 12 años del jefe/a presentes en el hogar.</td>
 </tr>
 <tr class="odd">
-<td>hijos_cat12</td>
+<td><code class="red28-variable">hijos_cat12</code></td>
 <td>0= Ninguno<br>1 = Uno<br>2 = Dos<br>3 = Tres o mas</td>
 <td>Clasificación de los hogares según el número de hijos/as menores de 12 años del jefe/a presentes en el hogar.</td>
 </tr>
 <tr class="even">
-<td>jefe_o_conyuge</td>
+<td><code class="red28-variable">jefe_o_conyuge</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>La persona es jefe/a de hogar o cónyuge. Es el universo en el que la paternidad es asignable</td>
 </tr>
 <tr class="odd">
-<td>hijo12_jefe_hogar</td>
+<td><code class="red28-variable">hijo12_jefe_hogar</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>En el hogar vive al menos un hijo/a del jefe/a menor de 12 años</td>
 </tr>
 <tr class="even">
-<td>hijo_jefe_hogar</td>
+<td><code class="red28-variable">hijo_jefe_hogar</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>En el hogar vive al menos un hijo/a del jefe/a, de cualquier edad</td>
 </tr>
 <tr class="odd">
-<td>nino12_hogar</td>
+<td><code class="red28-variable">nino12_hogar</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>En el hogar vive al menos una persona menor de 12 años, sin importar su parentesco</td>
 </tr>
 <tr class="even">
-<td>etnia_3</td>
+<td><code class="red28-variable">etnia_3</code></td>
 <td>1=Indígena/pueblo originario<br>2=Afrodescendiente/negro/afro<br>3=Resto</td>
 <td>Clasificación mínima regional.</td>
 </tr>
 <tr class="odd">
-<td>etnia_5</td>
+<td><code class="red28-variable">etnia_5</code></td>
 <td>1=Indígena<br>2=Afro<br>3=Mestizo/mixed<br>4=Blanco<br>5=Otro</td>
 <td>Clasificación ampliada. Solo si la encuesta distingue mestizo/blanco.</td>
 </tr>
 <tr class="even">
-<td>n_personas_hogar</td>
+<td><code class="red28-variable">n_personas_hogar</code></td>
 <td>Entero ≥ 0</td>
 <td>Cantidad de residentes habituales del hogar.</td>
 </tr>
 <tr class="odd">
-<td>dis_visual</td>
+<td><code class="red28-variable">dis_visual</code></td>
 <td>0=no; 1=sí</td>
 <td>Presenta dificultad para ver, aun utilizando lentes o anteojos correctivos.</td>
 </tr>
 <tr class="even">
-<td>dis_auditiva</td>
+<td><code class="red28-variable">dis_auditiva</code></td>
 <td>0=no; 1=sí</td>
 <td>Presenta dificultad para oír, aun utilizando audífonos o dispositivos de asistencia auditiva</td>
 </tr>
 <tr class="odd">
-<td>dis_caminar</td>
+<td><code class="red28-variable">dis_caminar</code></td>
 <td>0=no; 1=sí</td>
 <td>Presenta dificultad para caminar o subir escaleras</td>
 </tr>
 <tr class="even">
-<td>dis_concent</td>
+<td><code class="red28-variable">dis_concent</code></td>
 <td>0=no; 1=sí</td>
 <td>Presenta dificultad para recordar o concentrarse.</td>
 </tr>
 <tr class="odd">
-<td>dis_cuidado</td>
+<td><code class="red28-variable">dis_cuidado</code></td>
 <td>0=no; 1=sí</td>
 <td>Presenta dificultad para realizar actividades de autocuidado, como bañarse, vestirse o alimentarse.</td>
 </tr>
 <tr class="even">
-<td>dis_leng</td>
+<td><code class="red28-variable">dis_leng</code></td>
 <td>0=no; 1=sí</td>
 <td>Presenta dificultad para comunicarse o hacerse entender por otras personas.</td>
 </tr>
 <tr class="odd">
-<td>estado_civil</td>
+<td><code class="red28-variable">estado_civil</code></td>
 <td>1=Casado/a<br>2=Unión libre/conviviente<br>3=Separado/a<br>4=Divorciado/a<br>5=Viudo/a<br>6=Soltero/a<br>7=Separado/a o divorciado/a, sin desglose</td>
 <td>Situación civil o conyugal declarada al momento de la entrevista. Unidad: Persona; universo de la pregunta original.</td>
 </tr>
 <tr class="even">
-<td>n_nucleos_hogar</td>
+<td><code class="red28-variable">n_nucleos_hogar</code></td>
 <td>Entero ≥ 0</td>
 <td>Cantidad de núcleos familiares identificables entre los residentes habituales del hogar. Unidad: Hogar. Requiere vínculos familiares identificables; ver criterios metodológicos.</td>
 </tr>
 <tr class="odd">
-<td>adulto_25_34_con_padres</td>
+<td><code class="red28-variable">adulto_25_34_con_padres</code></td>
 <td>0=No<br>1=Sí</td>
 <td>Indica si una persona de 25 a 34 años convive con al menos uno de sus padres en el mismo hogar. Unidad: Persona de 25 a 34 años, inclusive.</td>
 </tr>
 <tr class="even">
-<td>mayor_65_vive_solo</td>
+<td><code class="red28-variable">mayor_65_vive_solo</code></td>
 <td>0=No<br>1=Sí</td>
 <td>Indica si una persona de 65 años o más integra un hogar unipersonal. Unidad: Persona de 65 años o más.</td>
 </tr>
 <tr class="odd">
-<td>pais_nacimiento</td>
+<td><code class="red28-variable">pais_nacimiento</code></td>
 <td>Texto: código ISO alfa-3 (ARG, BOL, VEN, etc.)</td>
 <td>País en el que nació la persona. Unidad: Persona; universo de la pregunta original.</td>
 </tr>
 <tr class="even">
-<td>anios_residencia_pais</td>
+<td><code class="red28-variable">anios_residencia_pais</code></td>
 <td>Años cumplidos ≥ 0<br>0=menos de un año observado</td>
 <td>Duración del episodio actual de residencia en el país de la encuesta. Unidad: Persona; universo de la pregunta migratoria original.</td>
 </tr>
 <tr class="odd">
-<td>residencia_1anio</td>
+<td><code class="red28-variable">residencia_1anio</code></td>
 <td>1=Mismo municipio<br>2=Otro municipio, misma división de primer orden<br>3=Otra división de primer orden del país<br>4=Otro país<br>5=Mismo país, sin detalle municipal<br>6=Otro municipio del país, sin detalle de división</td>
 <td>Ubicación de la residencia habitual un año antes de la entrevista, respecto de la residencia actual. Unidad: Persona de 1 año o más, dentro del universo original.</td>
 </tr>
 <tr class="even">
-<td>residencia_5anios</td>
+<td><code class="red28-variable">residencia_5anios</code></td>
 <td>1=Mismo municipio<br>2=Otro municipio, misma división de primer orden<br>3=Otra división de primer orden del país<br>4=Otro país<br>5=Mismo país, sin detalle municipal<br>6=Otro municipio del país, sin detalle de división</td>
 <td>Ubicación de la residencia habitual cinco años antes de la entrevista, respecto de la residencia actual. Unidad: Persona de 5 años o más, dentro del universo original.</td>
 </tr>
@@ -509,37 +509,37 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>tipo_vivienda_ONU</td>
+<td><code class="red28-variable">tipo_vivienda_ONU</code></td>
 <td>1 = Convencional con todas las instalaciones básicas<br>2 = Convencional sin todas las instalaciones básicas<br>3 = Semipermanente<br>4 = Móvil<br>5 = Improvisada<br>6 = En edificio permanente no destinado a habitación<br>7 = Otro lugar no destinado a habitación<br>8 = Hotel, pensión u otro alojamiento colectivo similar<br>9 = Institución<br>10 = Campamento o alojamiento colectivo de trabajadores<br>11 = Otro alojamiento colectivo</td>
 <td>Clasifica el alojamiento según la referencia internacional. Casas y departamentos pueden ser convencionales.</td>
 </tr>
 <tr class="even">
-<td>tipo_vivienda</td>
+<td><code class="red28-variable">tipo_vivienda</code></td>
 <td>1 = Casa<br>2 = Departamento o apartamento<br>3 = Pieza en inquilinato o vecindad<br>4 = Rancho o choza<br>5 = Vivienda improvisada<br>6 = Local no construido para habitación<br>7 = Otro tipo de vivienda</td>
 <td>Variable categórica que identifica la forma física y el uso original de la unidad habitacional en la que reside el hogar. Distingue viviendas construidas para residencia, habitaciones que funcionan como vivienda, construcciones tradicionales, alojamientos improvisados y locales destinados originalmente a otros usos. Se asigna una categoría a cada vivienda y se vincula ese valor a los hogares que la ocupan.</td>
 </tr>
 <tr class="odd">
-<td>n_cuartos<br>n_dormitorios<br>n_cuartos_negocio</td>
+<td><code class="red28-variable">n_cuartos</code><br><code class="red28-variable">n_dormitorios</code><br><code class="red28-variable">n_cuartos_negocio</code></td>
 <td>Enteros no negativos.</td>
 <td>Registran, respectivamente, cuartos, habitaciones para dormir y habitaciones destinadas a negocio o trabajo.</td>
 </tr>
 <tr class="even">
-<td>cocina_exclusiva</td>
+<td><code class="red28-variable">cocina_exclusiva</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Indica si el hogar dispone de un espacio exclusivo para cocinar.</td>
 </tr>
 <tr class="odd">
-<td>superficie_m2</td>
+<td><code class="red28-variable">superficie_m2</code></td>
 <td>Número positivo en m².</td>
 <td>Superficie de la vivienda expresada en metros cuadrados.</td>
 </tr>
 <tr class="even">
-<td>n_hogares_vivienda<br>n_personas_vivienda</td>
+<td><code class="red28-variable">n_hogares_vivienda</code><br><code class="red28-variable">n_personas_vivienda</code></td>
 <td>Enteros no negativos.</td>
 <td>Cantidad de hogares y de residentes habituales de la vivienda, respectivamente.</td>
 </tr>
 <tr class="odd">
-<td>anio_construccion</td>
+<td><code class="red28-variable">anio_construccion</code></td>
 <td>Año calendario.</td>
 <td>Año de construcción original de la vivienda.</td>
 </tr>
@@ -568,59 +568,59 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>y_lab_asal</td>
+<td><code class="red28-variable">y_lab_asal</code></td>
 <td>Monto mensual</td>
 <td>Ingreso monetario de asalariados por ocupación principal y secundarias. Registrar si se releva neto o bruto de aportes e impuestos.</td>
 </tr>
 <tr class="even">
-<td>y_lab_indep</td>
+<td><code class="red28-variable">y_lab_indep</code></td>
 <td>Monto mensual</td>
 <td>Ingreso de trabajadores por cuenta propia y empleadores. Documentar las reglas de medición y el tratamiento de pérdidas o valores extremos.</td>
 </tr>
 <tr class="odd">
-<td>y_lab_especie</td>
+<td><code class="red28-variable">y_lab_especie</code></td>
 <td>Monto mensual</td>
 <td>Pagos laborales en especie, como alimentación, vivienda u otros bienes y servicios, únicamente cuando la encuesta los valoriza.</td>
 </tr>
 <tr class="even">
-<td>y_jub_contributiva</td>
+<td><code class="red28-variable">y_jub_contributiva</code></td>
 <td>Monto mensual</td>
 <td>Jubilaciones y pensiones contributivas vinculadas a aportes al sistema previsional. Excluye las pensiones no contributivas.</td>
 </tr>
 <tr class="odd">
-<td>y_jub_nocontributiva</td>
+<td><code class="red28-variable">y_jub_nocontributiva</code></td>
 <td>Monto mensual</td>
-<td>Pensiones no contributivas, identificadas como tales en la fuente. Se registran por separado y se excluyen de y_transf_pub.</td>
+<td>Pensiones no contributivas, identificadas como tales en la fuente. Se registran por separado y se excluyen de <code class="red28-variable">y_transf_pub</code>.</td>
 </tr>
 <tr class="even">
-<td>y_jub</td>
+<td><code class="red28-variable">y_jub</code></td>
 <td>Monto mensual</td>
-<td>Total de jubilaciones y pensiones: y_jub = y_jub_contributiva + y_jub_nocontributiva. Si la fuente solo informa el total, se conserva sin imputar su desagregación.</td>
+<td>Total de jubilaciones y pensiones: <code class="red28-variable">y_jub</code> = <code class="red28-variable">y_jub_contributiva</code> + <code class="red28-variable">y_jub_nocontributiva</code>. Si la fuente solo informa el total, se conserva sin imputar su desagregación.</td>
 </tr>
 <tr class="odd">
-<td>y_transf_pub</td>
+<td><code class="red28-variable">y_transf_pub</code></td>
 <td>Monto mensual</td>
-<td>Transferencias públicas monetarias, incluidos programas sociales, excluidas las pensiones no contributivas registradas en y_jub_nocontributiva. Registrar si se releva su monto.</td>
+<td>Transferencias públicas monetarias, incluidos programas sociales, excluidas las pensiones no contributivas registradas en <code class="red28-variable">y_jub_nocontributiva</code>. Registrar si se releva su monto.</td>
 </tr>
 <tr class="even">
-<td>y_transf_priv</td>
+<td><code class="red28-variable">y_transf_priv</code></td>
 <td>Monto mensual</td>
 <td>Transferencias recibidas de otros hogares y remesas del exterior.</td>
 </tr>
 <tr class="odd">
-<td>y_capital</td>
+<td><code class="red28-variable">y_capital</code></td>
 <td>Monto mensual</td>
 <td>Intereses, dividendos y alquileres cobrados. Los alquileres cobrados se distinguen del alquiler pagado por el hogar y del valor locativo.</td>
 </tr>
 <tr class="even">
-<td>y_otros</td>
+<td><code class="red28-variable">y_otros</code></td>
 <td>Monto mensual</td>
 <td>Otros ingresos regulares que no pueden clasificarse en los componentes anteriores. Excluye ingresos extraordinarios.</td>
 </tr>
 <tr class="odd">
-<td>y_locativo</td>
+<td><code class="red28-variable">y_locativo</code></td>
 <td>Monto mensual del hogar</td>
-<td>Valor locativo declarado o imputado para propietarios. Se conserva separado y no integra Y_principal.</td>
+<td>Valor locativo declarado o imputado para propietarios. Se conserva separado y no integra <code class="red28-variable">Y_principal</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -643,19 +643,19 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Y_principal</td>
+<td><code class="red28-variable">Y_principal</code></td>
 <td>Monto mensual del hogar</td>
-<td>Suma de ocho componentes del hogar, incluido y_jub como total de jubilaciones y pensiones. Sus dos componentes no se suman nuevamente. Excluye y_locativo. Neto de impuestos y aportes donde la encuesta lo permita. Se utiliza para quintiles y carga de alquiler.</td>
+<td>Suma de ocho componentes del hogar, incluido <code class="red28-variable">y_jub</code> como total de jubilaciones y pensiones. Sus dos componentes no se suman nuevamente. Excluye <code class="red28-variable">y_locativo</code>. Neto de impuestos y aportes donde la encuesta lo permita. Se utiliza para quintiles y carga de alquiler.</td>
 </tr>
 <tr class="even">
-<td>Y_hipot</td>
+<td><code class="red28-variable">Y_hipot</code></td>
 <td>Monto mensual del hogar</td>
-<td>Ingreso laboral formal del jefe o jefa y de su cónyuge, más y_jub_contributiva de ambos. Se utiliza para evaluar capacidad de acceso a crédito hipotecario.</td>
+<td>Ingreso laboral formal del jefe o jefa y de su cónyuge, más <code class="red28-variable">y_jub_contributiva</code> de ambos. Se utiliza para evaluar capacidad de acceso a crédito hipotecario.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Fuente: CAF, Términos de referencia para la armonización de ingresos del RED 2028, sección 5. La desagregación de jubilaciones y pensiones distingue prestaciones contributivas y no contributivas; y_jub conserva el total de ambas.</p>
+<p>Fuente: CAF, Términos de referencia para la armonización de ingresos del RED 2028, sección 5. La desagregación de jubilaciones y pensiones distingue prestaciones contributivas y no contributivas; <code class="red28-variable">y_jub</code> conserva el total de ambas.</p>
 </section>
 <section id="tenencia" class="level2">
 <h2 class="anchored" data-anchor-id="tenencia">4 Tenencia</h2>
@@ -677,37 +677,37 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>tenencia_ONU</td>
+<td><code class="red28-variable">tenencia_ONU</code></td>
 <td>1 = Propietario<br>2 = Alquila toda o parte de la vivienda<br>2.1 = Arrendatario principal<br>2.2 = Subarrendatario<br>3 = Ocupación parcialmente libre de alquiler<br>4 = Ocupación totalmente libre de alquiler<br>5 = Otro arreglo</td>
 <td>Régimen bajo el cual el hogar ocupa la vivienda.</td>
 </tr>
 <tr class="even">
-<td>tenencia</td>
+<td><code class="red28-variable">tenencia</code></td>
 <td>1 = Propia pagada<br>2 = Propia en pago<br>3 = Alquilada o subalquilada<br>4 = Cedida por trabajo o servicios<br>5 = Prestada o cedida gratuitamente<br>6 = Ocupada de hecho<br>7 = Usufructo<br>8 = Cooperativa<br>9 = Herencia o sucesión<br>10 = Anticrético<br>11 = Contrato mixto<br>12 = Otra</td>
 <td>Variable categórica que identifica la relación declarada del hogar con la vivienda que ocupa: propiedad, alquiler, cesión u otro arreglo de ocupación. Describe el régimen de acceso a la vivienda y mantiene separadas la situación del terreno y la documentación del título.</td>
 </tr>
 <tr class="odd">
-<td>tenencia_terreno_orig</td>
+<td><code class="red28-variable">tenencia_terreno_orig</code></td>
 <td>Código y etiqueta originales.</td>
 <td>Relación de propiedad o uso del terreno ocupado.</td>
 </tr>
 <tr class="even">
-<td>titulo_propiedad</td>
+<td><code class="red28-variable">titulo_propiedad</code></td>
 <td>1 = Registrado<br>2 = No registrado<br>3 = En trámite<br>4 = Sin título</td>
 <td>Situación documental del título.</td>
 </tr>
 <tr class="odd">
-<td>adquisicion_forma_orig</td>
+<td><code class="red28-variable">adquisicion_forma_orig</code></td>
 <td>Códigos y etiquetas originales.</td>
 <td>Forma declarada de adquisición de la vivienda, como compra, herencia o donación.</td>
 </tr>
 <tr class="even">
-<td>valor_vivienda</td>
+<td><code class="red28-variable">valor_vivienda</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Valor de la vivienda declarado por el hogar.</td>
 </tr>
 <tr class="odd">
-<td>anios_residencia_vivienda</td>
+<td><code class="red28-variable">anios_residencia_vivienda</code></td>
 <td>Años cumplidos ≥ 0<br>0=menos de un año observado</td>
 <td>Tiempo de residencia continua del hogar en su vivienda actual. Unidad: Hogar; todos los regímenes de tenencia consultados.</td>
 </tr>
@@ -736,17 +736,17 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>financiamiento_orig</td>
+<td><code class="red28-variable">financiamiento_orig</code></td>
 <td>Códigos y etiquetas originales.</td>
 <td>Origen o modalidad del financiamiento utilizado para adquirir la vivienda, según las categorías nacionales.</td>
 </tr>
 <tr class="even">
-<td>hipoteca</td>
+<td><code class="red28-variable">hipoteca</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Existencia de hipoteca o préstamo de vivienda pendiente según el alcance de la pregunta.</td>
 </tr>
 <tr class="odd">
-<td>hipoteca_cuota</td>
+<td><code class="red28-variable">hipoteca_cuota</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Importe de cuota o pago del financiamiento de la vivienda.</td>
 </tr>
@@ -775,22 +775,22 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>alquiler_contrato</td>
+<td><code class="red28-variable">alquiler_contrato</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Existencia de contrato de alquiler según la definición del cuestionario.</td>
 </tr>
 <tr class="even">
-<td>alquiler_pagado</td>
+<td><code class="red28-variable">alquiler_pagado</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Importe del alquiler del hogar arrendatario.</td>
 </tr>
 <tr class="odd">
-<td>alquiler_pagaria</td>
+<td><code class="red28-variable">alquiler_pagaria</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Importe que el hogar estima que pagaría por la vivienda a la que se refiere la pregunta.</td>
 </tr>
 <tr class="even">
-<td>alquiler_referencia</td>
+<td><code class="red28-variable">alquiler_referencia</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Valor de alquiler de mercado de una vivienda comparable o ingreso esperado por el propietario.</td>
 </tr>
@@ -819,22 +819,22 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>material_pared<br>material_techo<br>material_piso</td>
+<td><code class="red28-variable">material_pared</code><br><code class="red28-variable">material_techo</code><br><code class="red28-variable">material_piso</code></td>
 <td>1 = Naturales y desechos<br>2 = Rudimentarios<br>3 = Terminados</td>
 <td>Material predominante de cada componente según los tres grupos propios del proyecto.</td>
 </tr>
 <tr class="even">
-<td>reparaciones</td>
+<td><code class="red28-variable">reparaciones</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>El hogar realizó mantenimiento, reparaciones, reemplazos o mejoras en el período consultado.</td>
 </tr>
 <tr class="odd">
-<td>reparaciones_tipo</td>
+<td><code class="red28-variable">reparaciones_tipo</code></td>
 <td>Categorías y respuesta múltiple originales de la encuesta.</td>
 <td>Tipo de obra o reparación realizada.</td>
 </tr>
 <tr class="even">
-<td>reparaciones_gasto</td>
+<td><code class="red28-variable">reparaciones_gasto</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Gasto en las obras y reparaciones relevadas.</td>
 </tr>
@@ -863,37 +863,37 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>agua_fuente_JMP</td>
+<td><code class="red28-variable">agua_fuente_JMP</code></td>
 <td>1 = Mejorada<br>2 = No mejorada<br>3 = Agua superficial</td>
 <td>Clasifica la fuente utilizada para beber según su diseño y construcción.</td>
 </tr>
 <tr class="even">
-<td>agua_servicio_JMP</td>
+<td><code class="red28-variable">agua_servicio_JMP</code></td>
 <td>1 = Gestionado de manera segura<br>2 = Básico<br>3 = Limitado<br>4 = No mejorado<br>5 = Agua superficial</td>
 <td>Nivel del servicio cuando la encuesta y las fuentes complementarias aportan la información necesaria.</td>
 </tr>
 <tr class="odd">
-<td>agua_fuente</td>
+<td><code class="red28-variable">agua_fuente</code></td>
 <td>1 = Red pública<br>2 = Pozo<br>3 = Manantial<br>4 = Río lago o canal<br>5 = Lluvia<br>6 = Camión cisterna<br>7 = Agua embotellada o envasada<br>8 = Otra</td>
 <td>Variable categórica que identifica la procedencia principal del agua utilizada por el hogar. La pregunta original determina si se refiere al agua para beber o al abastecimiento general; ese uso debe conservarse para comparar respuestas equivalentes.</td>
 </tr>
 <tr class="even">
-<td>agua_proveedor_orig</td>
+<td><code class="red28-variable">agua_proveedor_orig</code></td>
 <td>Código y etiqueta originales del proveedor.</td>
 <td>Entidad o modalidad que provee el agua.</td>
 </tr>
 <tr class="odd">
-<td>agua_conexion</td>
+<td><code class="red28-variable">agua_conexion</code></td>
 <td>1 = Dentro de la vivienda<br>2 = Dentro del terreno fuera de la vivienda<br>3 = Fuera del terreno excepto llave pública<br>4 = Llave pública<br>5 = Sin conexión</td>
 <td>Variable categórica que identifica dónde se encuentra el punto de conexión o acceso al sistema de abastecimiento utilizado por el hogar. Distingue conexiones interiores, conexiones en el terreno, puntos externos, llaves públicas y abastecimiento sin conexión.</td>
 </tr>
 <tr class="even">
-<td>agua_acarreo<br>agua_deposito<br>agua_medidor</td>
+<td><code class="red28-variable">agua_acarreo</code><br><code class="red28-variable">agua_deposito</code><br><code class="red28-variable">agua_medidor</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Indican, respectivamente, acarreo de agua, existencia de depósito o cisterna y existencia de medidor.</td>
 </tr>
 <tr class="odd">
-<td>gasto_agua</td>
+<td><code class="red28-variable">gasto_agua</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Importe pagado o declarado por el servicio de agua.</td>
 </tr>
@@ -922,42 +922,42 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>energia_cocinar_OMS</td>
+<td><code class="red28-variable">energia_cocinar_OMS</code></td>
 <td>1 = Limpia<br>2 = De transición<br>3 = Contaminante</td>
 <td>Clasifica la combinación de combustible y tecnología utilizada para cocinar; no solo el nombre del combustible.</td>
 </tr>
 <tr class="even">
-<td>electricidad</td>
+<td><code class="red28-variable">electricidad</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Acceso a electricidad de cualquier fuente.</td>
 </tr>
 <tr class="odd">
-<td>electricidad_fuente</td>
+<td><code class="red28-variable">electricidad_fuente</code></td>
 <td>1 = Red pública<br>2 = Generador propio<br>3 = Generador comunitario<br>4 = Solar<br>5 = Batería<br>6 = Otra<br>7 = Sin electricidad</td>
 <td>Fuente principal de electricidad.</td>
 </tr>
 <tr class="even">
-<td>alumbrado_fuente_orig</td>
+<td><code class="red28-variable">alumbrado_fuente_orig</code></td>
 <td>Código y etiqueta originales.</td>
 <td>Fuente utilizada para iluminar la vivienda, incluida electricidad, vela o kerosene.</td>
 </tr>
 <tr class="odd">
-<td>electricidad_interrupciones</td>
+<td><code class="red28-variable">electricidad_interrupciones</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Existencia de cortes del suministro durante el período consultado.</td>
 </tr>
 <tr class="even">
-<td>combustible_cocinar<br>combustible_calefaccion<br>combustible_agua_caliente</td>
+<td><code class="red28-variable">combustible_cocinar</code><br><code class="red28-variable">combustible_calefaccion</code><br><code class="red28-variable">combustible_agua_caliente</code></td>
 <td>1 = Gas por red<br>2 = Gas en garrafa o tanque<br>3 = Electricidad<br>4 = Leña<br>5 = Carbón<br>6 = Kerosene<br>7 = Bosta o estiércol<br>8 = Biogás<br>9 = Otra<br>10 = No utiliza para ese fin</td>
 <td>Fuente principal de energía para cocinar, calefaccionar y calentar agua, respectivamente.</td>
 </tr>
 <tr class="odd">
-<td>estufa<br>fogon<br>chimenea</td>
+<td><code class="red28-variable">estufa</code><br><code class="red28-variable">fogon</code><br><code class="red28-variable">chimenea</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Presencia de estufa, fogón y chimenea o salida de humo, respectivamente.</td>
 </tr>
 <tr class="even">
-<td>gasto_electricidad<br>gasto_combustible</td>
+<td><code class="red28-variable">gasto_electricidad</code><br><code class="red28-variable">gasto_combustible</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Importes por electricidad y combustibles del hogar, respectivamente.</td>
 </tr>
@@ -986,47 +986,47 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>sanitario_tipo_JMP</td>
+<td><code class="red28-variable">sanitario_tipo_JMP</code></td>
 <td>1 = Mejorada<br>2 = No mejorada<br>3 = Sin instalación</td>
 <td>Tipo de instalación según la separación higiénica de excretas del contacto humano.</td>
 </tr>
 <tr class="even">
-<td>saneamiento_servicio_JMP</td>
+<td><code class="red28-variable">saneamiento_servicio_JMP</code></td>
 <td>1 = Gestionado de manera segura<br>2 = Básico<br>3 = Limitado<br>4 = No mejorado<br>5 = Defecación al aire libre</td>
 <td>Nivel del servicio de saneamiento del hogar.</td>
 </tr>
 <tr class="odd">
-<td>sanitario_tipo</td>
+<td><code class="red28-variable">sanitario_tipo</code></td>
 <td>1 = Inodoro con descarga<br>2 = Inodoro con agua a balde<br>3 = Letrina<br>4 = Baño ecológico<br>5 = Otro<br>6 = Sin sanitario</td>
-<td>Variable categórica que identifica la instalación utilizada por el hogar para la eliminación de excretas, según su mecanismo de descarga o su forma de recepción. El destino posterior de las excretas se registra en sanitario_destino.</td>
+<td>Variable categórica que identifica la instalación utilizada por el hogar para la eliminación de excretas, según su mecanismo de descarga o su forma de recepción. El destino posterior de las excretas se registra en <code class="red28-variable">sanitario_destino</code>.</td>
 </tr>
 <tr class="even">
-<td>sanitario_destino</td>
+<td><code class="red28-variable">sanitario_destino</code></td>
 <td>1 = Alcantarillado o cloaca<br>2 = Tanque o fosa séptica<br>3 = Pozo ciego<br>4 = Río o canal<br>5 = Superficie<br>6 = Otro</td>
 <td>Variable categórica que identifica el sistema o lugar al que llegan las excretas o la descarga del sanitario utilizado por el hogar. Describe su evacuación y no acredita, por sí sola, el tratamiento final.</td>
 </tr>
 <tr class="odd">
-<td>sanitario_ubicacion</td>
+<td><code class="red28-variable">sanitario_ubicacion</code></td>
 <td>1 = Dentro de la vivienda<br>2 = Dentro del terreno fuera de la vivienda<br>3 = Fuera del terreno</td>
 <td>Ubicación de la instalación utilizada.</td>
 </tr>
 <tr class="even">
-<td>sanitario_exclusivo</td>
+<td><code class="red28-variable">sanitario_exclusivo</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>El sanitario es de uso exclusivo del hogar.</td>
 </tr>
 <tr class="odd">
-<td>n_banios</td>
+<td><code class="red28-variable">n_banios</code></td>
 <td>Entero no negativo.</td>
 <td>Cantidad de baños disponibles para el hogar o la vivienda, según la pregunta.</td>
 </tr>
 <tr class="even">
-<td>ducha</td>
+<td><code class="red28-variable">ducha</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Existencia de ducha o instalación para bañarse.</td>
 </tr>
 <tr class="odd">
-<td>aguas_grises_destino_orig</td>
+<td><code class="red28-variable">aguas_grises_destino_orig</code></td>
 <td>Código y etiqueta originales.</td>
 <td>Forma de evacuación del agua usada en cocina, lavado y baño.</td>
 </tr>
@@ -1055,32 +1055,32 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>internet_hogar</td>
+<td><code class="red28-variable">internet_hogar</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Acceso a internet en la vivienda, mediante conexión fija o móvil en funcionamiento y generalmente disponible para todos los miembros del hogar. No requiere que el hogar sea propietario del equipo.</td>
 </tr>
 <tr class="even">
-<td>internet_fijo<br>internet_movil</td>
+<td><code class="red28-variable">internet_fijo</code><br><code class="red28-variable">internet_movil</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Disponibilidad de internet fijo y móvil en el hogar, respectivamente.</td>
 </tr>
 <tr class="odd">
-<td>internet_tecnologia_orig</td>
+<td><code class="red28-variable">internet_tecnologia_orig</code></td>
 <td>Códigos y etiquetas originales; admite respuesta múltiple.</td>
 <td>Tecnologías declaradas: cable, fibra, ADSL, módem USB, SIM, satélite u otras.</td>
 </tr>
 <tr class="even">
-<td>internet_noacceso_orig</td>
+<td><code class="red28-variable">internet_noacceso_orig</code></td>
 <td>Códigos y etiquetas originales; admite respuesta múltiple.</td>
 <td>Motivos de no disponer de internet: costo, cobertura, conocimientos, privacidad, acceso en otro lugar, no lo necesita u otros.</td>
 </tr>
 <tr class="odd">
-<td>tv_paga</td>
+<td><code class="red28-variable">tv_paga</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Acceso a televisión paga.</td>
 </tr>
 <tr class="even">
-<td>gasto_internet</td>
+<td><code class="red28-variable">gasto_internet</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Importe por el servicio de internet del hogar.</td>
 </tr>
@@ -1109,17 +1109,17 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>residuos_eliminacion</td>
+<td><code class="red28-variable">residuos_eliminacion</code></td>
 <td>1 = Recolección pública<br>2 = Recolección privada<br>3 = Contenedor<br>4 = Quema<br>5 = Entierro<br>6 = Vertedero<br>7 = Terreno calle o río<br>8 = Compostaje<br>9 = Reciclaje<br>10 = Otra</td>
 <td>Forma principal de eliminación de residuos domésticos.</td>
 </tr>
 <tr class="even">
-<td>residuos_recolec_semana</td>
+<td><code class="red28-variable">residuos_recolec_semana</code></td>
 <td>Número no negativo de recolecciones por semana.</td>
 <td>Frecuencia semanal de recolección.</td>
 </tr>
 <tr class="odd">
-<td>gasto_residuos</td>
+<td><code class="red28-variable">gasto_residuos</code></td>
 <td>Monto no negativo en moneda y período originales de la encuesta.</td>
 <td>Pago por recolección o eliminación de residuos.</td>
 </tr>
@@ -1131,7 +1131,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="mercado-laboral" class="level2">
 <h2 class="anchored" data-anchor-id="mercado-laboral">13 Mercado Laboral</h2>
 <p><a href="../chapters/03-consideraciones-metodologicas.html#mercado-laboral-1">Reglas de armonización de este bloque</a></p>
-<p>tipo_empleo es una variable directa que identifica la categoría ocupacional de la persona en su empleo principal.</p>
+<p><code class="red28-variable">tipo_empleo</code> es una variable directa que identifica la categoría ocupacional de la persona en su empleo principal.</p>
 <div class="table-responsive">
 <table class="caption-top table">
 <colgroup>
@@ -1148,7 +1148,7 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>tipo_empleo</td>
+<td><code class="red28-variable">tipo_empleo</code></td>
 <td>1 = Empleador/patrón<br>2 = Cuentapropista/independiente<br>3 = Asalariado<br>4 = Doméstico<br>5 = Trabajador familiar no remunerado</td>
 <td>Tipo de empleo en cinco categorías. Categoría ocupacional en el empleo principal.</td>
 </tr>
@@ -1159,7 +1159,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="protección-social" class="level2">
 <h2 class="anchored" data-anchor-id="protección-social">14 Protección Social</h2>
 <p><a href="../chapters/03-consideraciones-metodologicas.html#protección-social-1">Reglas de armonización de este bloque</a></p>
-<p>aporte_jubilacion es una variable directa que indica si la persona cotiza al sistema de pensión o jubilación.</p>
+<p><code class="red28-variable">aporte_jubilacion</code> es una variable directa que indica si la persona cotiza al sistema de pensión o jubilación.</p>
 <div class="table-responsive">
 <table class="caption-top table">
 <colgroup>
@@ -1176,7 +1176,7 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>aporte_jubilacion</td>
+<td><code class="red28-variable">aporte_jubilacion</code></td>
 <td>0 = No; 1 = Sí</td>
 <td>Indicador de aporte al sistema previsional. Criterio central para determinar la informalidad RED en todos los tipos de empleo: empleadores, cuentapropistas, asalariados, trabajadores domésticos y trabajadores familiares no remunerados.</td>
 </tr>
