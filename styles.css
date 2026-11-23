@@ -83,6 +83,39 @@
     padding: clamp(1rem, 2vw, 1.65rem);
   }
 
+  #quarto-header .navbar {
+    border-bottom: 1px solid #cfdee6;
+  }
+
+  #quarto-header .navbar-brand-container.mx-auto {
+    margin-inline-start: 0 !important;
+  }
+
+  #quarto-header .navbar-brand-logo {
+    position: relative;
+    display: block;
+    width: 11rem;
+    aspect-ratio: 5.8;
+    overflow: hidden;
+  }
+
+  /* El archivo del logo incluye márgenes blancos. */
+  #quarto-header .navbar-brand-logo .navbar-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 126%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  body:has(#quarto-header .navbar-brand-logo) #presentación > p:has(> img[alt^="CAF —"]) {
+    display: none;
+  }
+
   #presentación img[alt^="CAF —"] {
     width: min(100%, 28rem);
     height: auto;
