@@ -83,6 +83,11 @@
     padding: clamp(1rem, 2vw, 1.65rem);
   }
 
+  #presentación img[alt^="CAF —"] {
+    width: min(100%, 28rem);
+    height: auto;
+  }
+
   #title-block-header .subtitle,
   #quarto-margin-sidebar #TOC .nav-link.active {
     color: var(--red28-blue);
