@@ -156,3 +156,16 @@ p,
 .lead {
   font-family: var(--red28-typeface);
 }
+
+/* Identificadores de variables en el texto y el catálogo. */
+#quarto-document-content code.red28-variable {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: .88em;
+  color: #244d75;
+  background-color: #e6eef6;
+  padding: .08em .28em;
+  border-radius: .24em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
