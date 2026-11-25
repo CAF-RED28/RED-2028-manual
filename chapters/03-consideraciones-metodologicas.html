@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7b10a32f54b3580059b1fe00f8f34fea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-467e7c5970ad65efa52454848f8b356e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -179,6 +179,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#eliminación-de-residuos-1" id="toc-eliminación-de-residuos-1" class="nav-link" data-scroll-target="#eliminación-de-residuos-1">12 Eliminación de residuos</a></li>
   <li><a href="#mercado-laboral-1" id="toc-mercado-laboral-1" class="nav-link" data-scroll-target="#mercado-laboral-1">13 Mercado Laboral</a></li>
   <li><a href="#protección-social-1" id="toc-protección-social-1" class="nav-link" data-scroll-target="#protección-social-1">14 Protección Social</a></li>
+  <li><a href="#gastos-1" id="toc-gastos-1" class="nav-link" data-scroll-target="#gastos-1">15 Gastos</a></li>
   </ul>
 </nav>
     </div>
@@ -1574,6 +1575,13 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="../chapters/02-encuestas-y-variables.html#protección-social">Variables y codificaciones de este bloque</a></p>
 <p><code class="red28-variable">aporte_jubilacion</code> registra el aporte al sistema previsional: 0 = no aporta y 1 = aporta. Se verifica que la pregunta identifique la cotización y se conserva su universo y período de referencia; la afiliación o la percepción de una jubilación no sustituyen por sí solas el aporte.</p>
 <p>El aporte previsional es el criterio central para determinar la informalidad RED en todos los tipos de empleo: empleadores o patrones, cuentapropistas o independientes, asalariados, trabajadores domésticos y trabajadores familiares no remunerados. La categoría ocupacional por sí sola no determina la formalidad. Para aplicar este criterio entre personas ocupadas, se distingue la ausencia observada de aporte de la falta de información. La no respuesta, la ausencia de la pregunta y los casos no aplicables no se codifican como 0.</p>
+</section>
+<section id="gastos-1" class="level2">
+<h2 class="anchored" data-anchor-id="gastos-1">15 Gastos</h2>
+<p><a href="../chapters/02-encuestas-y-variables.html#gastos">Variables y codificaciones de este bloque</a></p>
+<p>Se conserva el importe en moneda local, el período de referencia y el alcance de la pregunta original. Para construir los montos de gasto, se convierte cada partida al período indicado en el cuadro del bloque. Los importes anuales del módulo GMD UTL se expresan a precios corrientes, sin deflactar.</p>
+<p>Los agregados se calculan con partidas de cobertura compatible y un período común. Por ejemplo, <code class="red28-variable">water_exp</code> reúne <code class="red28-variable">pwater_exp</code> y <code class="red28-variable">hwater_exp</code>. Si la encuesta solo releva el total conjunto, se conserva el agregado y se dejan los componentes sin desglose como faltantes.</p>
+<p>Cada pago se cuenta una sola vez. Los cobros incluidos en paquetes, otras facturas o el alquiler se mantienen como montos conjuntos si no se dispone de un desglose. Se documenta si la cobertura de un agregado es parcial. El cero corresponde a un gasto efectivamente nulo.</p>
 
 
 </section>
