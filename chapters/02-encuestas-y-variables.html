@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-467e7c5970ad65efa52454848f8b356e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7b10a32f54b3580059b1fe00f8f34fea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1194,7 +1194,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="gastos">15 Gastos</h2>
 <p><a href="../chapters/03-consideraciones-metodologicas.html#gastos-1">Reglas de armonización de este bloque</a></p>
 <p>El bloque reúne 48 variables construidas a nivel de hogar. Las 37 variables de referencia internacional siguen el módulo de servicios del Banco Mundial (GMD UTL) y se expresan en montos anuales. Las 11 variables complementarias se expresan en montos mensuales.</p>
-<p><strong>Cuadro 16 bis. Gastos del hogar</strong></p>
+<p><strong>Cuadro 18. Gastos del hogar</strong></p>
 <div class="table-responsive">
 <table class="caption-top table">
 <colgroup>
@@ -1211,242 +1211,222 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong><code class="red28-variable">pwater_exp</code></strong><br><code class="red28-variable">Abastecimiento</code> <code class="red28-variable">de</code> <code class="red28-variable">agua</code></td>
+<td><code class="red28-variable">pwater_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en suministro de agua, incluida la red y los cargos fijos, alquiler y lectura de medidores. Excluye agua caliente y agua potable embotellada.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">hwater_exp</code></strong><br><code class="red28-variable">Abastecimiento</code> <code class="red28-variable">de</code> <code class="red28-variable">agua</code> <code class="red28-variable">caliente</code></td>
+<td><code class="red28-variable">hwater_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en el suministro de agua caliente.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">water_exp</code></strong><br><code class="red28-variable">Abastecimiento</code> <code class="red28-variable">de</code> <code class="red28-variable">agua</code> <code class="red28-variable">y</code> <code class="red28-variable">agua</code> <code class="red28-variable">caliente</code></td>
+<td><code class="red28-variable">water_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual conjunto en suministro de agua y agua caliente. Suma <code class="red28-variable">pwater_exp</code> y <code class="red28-variable">hwater_exp</code>.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">garbage_exp</code></strong><br>Recolección <code class="red28-variable">y</code> disposición <code class="red28-variable">de</code> <code class="red28-variable">basura</code></td>
+<td><code class="red28-variable">garbage_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en la recolección y disposición de basura o residuos sólidos.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">sewage_exp</code></strong><br>Recolección <code class="red28-variable">y</code> disposición <code class="red28-variable">de</code> <code class="red28-variable">aguas</code> <code class="red28-variable">residuales</code></td>
+<td><code class="red28-variable">sewage_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en la recolección y disposición de aguas residuales.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">waste_exp</code></strong><br><code class="red28-variable">Basura</code> <code class="red28-variable">y</code> <code class="red28-variable">aguas</code> <code class="red28-variable">residuales</code></td>
+<td><code class="red28-variable">waste_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual conjunto en recolección de basura y aguas residuales. Suma <code class="red28-variable">garbage_exp</code> y <code class="red28-variable">sewage_exp</code>.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">dwelothsvc_exp</code></strong><br><code class="red28-variable">Otros</code> <code class="red28-variable">servicios</code> <code class="red28-variable">de</code> <code class="red28-variable">la</code> <code class="red28-variable">vivienda</code></td>
+<td><code class="red28-variable">dwelothsvc_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en servicios asociados a la vivienda, como cargos comunes de edificios y vigilancia. Excluye reparaciones de la vivienda, servicios domésticos de limpieza o desinfección y protección personal.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">elec_exp</code></strong><br><code class="red28-variable">Electricidad</code></td>
+<td><code class="red28-variable">elec_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en electricidad, incluidos alquiler y lectura de medidores y otros cargos fijos.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">ngas_exp</code></strong><br><code class="red28-variable">Gas</code> <code class="red28-variable">de</code> <code class="red28-variable">red</code> <code class="red28-variable">o</code> <code class="red28-variable">natural</code></td>
+<td><code class="red28-variable">ngas_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en gas de red (gas de ciudad) y gas natural.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">LPG_exp</code></strong><br><code class="red28-variable">Gas</code> <code class="red28-variable">licuado</code> <code class="red28-variable">de</code> petróleo (<code class="red28-variable">GLP</code>)</td>
+<td><code class="red28-variable">LPG_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en GLP, incluido el butano, el propano y el gas envasado.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">gas_exp</code></strong><br><code class="red28-variable">Gas</code> <code class="red28-variable">de</code> <code class="red28-variable">red</code> <code class="red28-variable">o</code> <code class="red28-variable">natural</code> <code class="red28-variable">y</code> <code class="red28-variable">GLP</code></td>
+<td><code class="red28-variable">gas_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual conjunto en gas de red o natural y GLP. Suma <code class="red28-variable">ngas_exp</code> y <code class="red28-variable">LPG_exp</code> e incluye cargos fijos, medidores y recipientes de almacenamiento.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">gasoline_exp</code></strong><br><code class="red28-variable">Gasolina</code></td>
+<td><code class="red28-variable">gasoline_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en gasolina. Sus usos principales incluyen automóviles y motocicletas.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">diesel_exp</code></strong><br>Diésel <code class="red28-variable">o</code> gasóleo</td>
+<td><code class="red28-variable">diesel_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en diésel o gasóleo, utilizado, por ejemplo, en generadores y vehículos.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">kerosene_exp</code></strong><br><code class="red28-variable">Queroseno</code></td>
+<td><code class="red28-variable">kerosene_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en queroseno.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">othliq_exp</code></strong><br><code class="red28-variable">Otros</code> <code class="red28-variable">combustibles</code> líquidos</td>
+<td><code class="red28-variable">othliq_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en combustibles líquidos distintos de la gasolina, el diésel y el queroseno, como fuelóleo para calefacción o iluminación.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">liquid_exp</code></strong><br><code class="red28-variable">Combustibles</code> líquidos</td>
+<td><code class="red28-variable">liquid_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en todos los combustibles líquidos. Suma <code class="red28-variable">gasoline_exp</code>, <code class="red28-variable">diesel_exp</code>, <code class="red28-variable">kerosene_exp</code> y <code class="red28-variable">othliq_exp</code>.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">wood_exp</code></strong><br>Leña</td>
+<td><code class="red28-variable">wood_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en leña. En algunos países incluye el valor imputado de la leña recolectada.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">coal_exp</code></strong><br>Carbón <code class="red28-variable">mineral</code></td>
+<td><code class="red28-variable">coal_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en carbón mineral. El carbón vegetal corresponde a <code class="red28-variable">othsol_exp</code>.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">peat_exp</code></strong><br><code class="red28-variable">Turba</code></td>
+<td><code class="red28-variable">peat_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en turba.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">othsol_exp</code></strong><br><code class="red28-variable">Otros</code> <code class="red28-variable">combustibles</code> sólidos</td>
+<td><code class="red28-variable">othsol_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en combustibles sólidos distintos de carbón mineral, leña y turba, como carbón vegetal, residuos agrícolas o estiércol prensado.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">solid_exp</code></strong><br><code class="red28-variable">Combustibles</code> sólidos</td>
+<td><code class="red28-variable">solid_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en todos los combustibles sólidos, incluidos carbón mineral (<code class="red28-variable">coal_exp</code>), leña (<code class="red28-variable">wood_exp</code>), turba (<code class="red28-variable">peat_exp</code>) y otros combustibles sólidos (<code class="red28-variable">othsol_exp</code>).</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">othfuel_exp</code></strong><br><code class="red28-variable">Otros</code> <code class="red28-variable">combustibles</code></td>
+<td><code class="red28-variable">othfuel_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en otros combustibles que quedan fuera de <code class="red28-variable">othliq_exp</code> y <code class="red28-variable">othsol_exp</code>.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">central_exp</code></strong><br>Calefacción <code class="red28-variable">central</code></td>
+<td><code class="red28-variable">central_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en calefacción central.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">heating_exp</code></strong><br>Calefacción <code class="red28-variable">central</code> <code class="red28-variable">y</code> <code class="red28-variable">agua</code> <code class="red28-variable">caliente</code></td>
+<td><code class="red28-variable">heating_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en calefacción central y suministro de agua caliente. Combina <code class="red28-variable">central_exp</code> y <code class="red28-variable">hwater_exp</code>. Incluye calor de la red, el edificio u otras fuentes.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">utl_exp</code></strong><br><code class="red28-variable">Servicios</code> <code class="red28-variable">y</code> <code class="red28-variable">combustibles</code> <code class="red28-variable">del</code> <code class="red28-variable">hogar</code></td>
+<td><code class="red28-variable">utl_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Suma anual de <code class="red28-variable">water_exp</code>, <code class="red28-variable">waste_exp</code>, <code class="red28-variable">elec_exp</code>, <code class="red28-variable">gas_exp</code>, <code class="red28-variable">liquid_exp</code>, <code class="red28-variable">solid_exp</code>, <code class="red28-variable">central_exp</code> y <code class="red28-variable">othfuel_exp</code>. Excluye reparaciones de vivienda, combustible de transporte, telecomunicaciones y televisión.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">dwelmat_exp</code></strong><br><code class="red28-variable">Materiales</code> <code class="red28-variable">de</code> <code class="red28-variable">mantenimiento</code> <code class="red28-variable">y</code> reparación <code class="red28-variable">menor</code></td>
+<td><code class="red28-variable">dwelmat_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en productos y materiales para reparaciones menores de la vivienda, como pintura, yeso o vidrios. Excluye herramientas, productos de limpieza y materiales para obras mayores, ampliaciones o conversiones.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">dwelsvc_exp</code></strong><br><code class="red28-variable">Servicios</code> <code class="red28-variable">de</code> <code class="red28-variable">mantenimiento</code> <code class="red28-variable">y</code> reparación <code class="red28-variable">menor</code></td>
+<td><code class="red28-variable">dwelsvc_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en servicios de reparación menor de la vivienda. Incluye mano de obra y materiales facturados con el servicio. Excluye compras de materiales por separado y servicios para obras mayores, ampliaciones o conversiones.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">othhousing_exp</code></strong><br><code class="red28-variable">Mantenimiento</code> <code class="red28-variable">y</code> reparación <code class="red28-variable">menor</code> <code class="red28-variable">de</code> <code class="red28-variable">vivienda</code></td>
+<td><code class="red28-variable">othhousing_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en materiales y servicios de mantenimiento y reparación menor de vivienda. Suma <code class="red28-variable">dwelmat_exp</code> y <code class="red28-variable">dwelsvc_exp</code>.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">transfuel_exp</code></strong><br><code class="red28-variable">Combustibles</code> <code class="red28-variable">para</code> <code class="red28-variable">transporte</code> <code class="red28-variable">personal</code></td>
+<td><code class="red28-variable">transfuel_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual del hogar en combustibles para transporte personal. Excluye lubricantes.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">landphone_exp</code></strong><br><code class="red28-variable">Servicio</code> <code class="red28-variable">de</code> telefonía <code class="red28-variable">fija</code></td>
+<td><code class="red28-variable">landphone_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en instalación, abono y uso de telefonía fija. Excluye la compra de equipos.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">cellphone_exp</code></strong><br><code class="red28-variable">Servicio</code> <code class="red28-variable">de</code> telefonía móvil</td>
+<td><code class="red28-variable">cellphone_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en instalación, abono y uso de telefonía móvil. Excluye la compra de equipos.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">tel_exp</code></strong><br>Telefonía <code class="red28-variable">fija</code> <code class="red28-variable">y</code> móvil</td>
+<td><code class="red28-variable">tel_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en telefonía fija y móvil. Suma <code class="red28-variable">landphone_exp</code> y <code class="red28-variable">cellphone_exp</code>. Puede incluir llamadas públicas o privadas y alquiler de equipos telefónicos. Excluye la compra de equipos.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">internet_exp</code></strong><br><code class="red28-variable">Servicio</code> <code class="red28-variable">de</code> <code class="red28-variable">internet</code></td>
+<td><code class="red28-variable">internet_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en conexión a internet y transmisión de datos, incluidos instalación, abono y uso. Excluye la compra de equipos.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">telefax_exp</code></strong><br>Telégrafo, télex <code class="red28-variable">y</code> <code class="red28-variable">telefax</code></td>
+<td><code class="red28-variable">telefax_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en servicios de telégrafo, télex y telefax, incluida la radiotelefonía, la radiotelegrafía y el radiotélex.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">comm_exp</code></strong><br><code class="red28-variable">Servicios</code> <code class="red28-variable">de</code> <code class="red28-variable">telecomunicaciones</code></td>
+<td><code class="red28-variable">comm_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en telefonía fija y móvil, internet y servicios de telefax. Suma <code class="red28-variable">tel_exp</code>, <code class="red28-variable">internet_exp</code> y <code class="red28-variable">telefax_exp</code>.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">tv_exp</code></strong><br><code class="red28-variable">Servicios</code> <code class="red28-variable">de</code> televisión</td>
+<td><code class="red28-variable">tv_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual en servicios de televisión, licencias de equipos receptores y suscripciones. Excluye otros servicios culturales, como teatros, museos y monumentos.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">tvintph_exp</code></strong><br>Televisión, <code class="red28-variable">internet</code> <code class="red28-variable">y</code> telefonía</td>
+<td><code class="red28-variable">tvintph_exp</code></td>
 <td>Monto anual en moneda local corriente, sin deflactar</td>
 <td>Gasto anual conjunto en televisión, internet y telefonía. Suma <code class="red28-variable">tv_exp</code>, <code class="red28-variable">internet_exp</code> y <code class="red28-variable">tel_exp</code>.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">gasto_alihogar</code></strong><br><code class="red28-variable">Alimentos</code> <code class="red28-variable">dentro</code> <code class="red28-variable">del</code> <code class="red28-variable">hogar</code></td>
+<td><code class="red28-variable">gasto_alihogar</code></td>
 <td>Monto mensual en moneda local corriente</td>
 <td>Gasto en alimentos consumidos en el hogar. Distinguir compras para consumo en el hogar, autoconsumo, donaciones y otras formas de adquisición.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">gasto_alifuera</code></strong><br><code class="red28-variable">Alimentos</code> <code class="red28-variable">fuera</code> <code class="red28-variable">del</code> <code class="red28-variable">hogar</code></td>
+<td><code class="red28-variable">gasto_alifuera</code></td>
 <td>Monto mensual en moneda local corriente</td>
 <td>Gasto en alimentos consumidos fuera del hogar. Conciliar diarios del hogar y registros personales para contar cada gasto una sola vez.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">gasto_alta</code></strong><br><code class="red28-variable">Alcohol</code> <code class="red28-variable">y</code> <code class="red28-variable">tabaco</code></td>
+<td><code class="red28-variable">gasto_alta</code></td>
 <td>Monto mensual en moneda local corriente</td>
-<td>Gasto en bebidas alcohólicas y tabaco. Separar alcohol y tabaco de los agregados de alimentos. Armonizar el período de cada componente.</td>
+<td>Gasto en bebidas alcohólicas y tabaco. Separar alcohol y tabaco de los agregados de alimentos.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">gasto_veca</code></strong><br><code class="red28-variable">Vestido</code> <code class="red28-variable">y</code> <code class="red28-variable">calzado</code></td>
+<td><code class="red28-variable">gasto_veca</code></td>
 <td>Monto mensual en moneda local corriente</td>
-<td>Gasto en prendas de vestir y calzado. Armonizar el período y conservar las partidas de vestido y calzado según la clasificación de la encuesta.</td>
+<td>Gasto en prendas de vestir y calzado.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">gasto_viv</code></strong><br><code class="red28-variable">Vivienda</code>, <code class="red28-variable">servicios</code> <code class="red28-variable">y</code> <code class="red28-variable">combustibles</code></td>
+<td><code class="red28-variable">gasto_sal</code></td>
 <td>Monto mensual en moneda local corriente</td>
-<td>Agregado de vivienda, conservación, servicios y combustibles domésticos. Conciliar con <code class="red28-variable">gasto_vcon</code> y <code class="red28-variable">utl_exp</code> en un período común. Clasificar cada pago una sola vez y documentar la cobertura del agregado.</td>
+<td>Gasto del hogar en bienes y servicios de salud.</td>
 </tr>
 <tr class="odd">
-<td><strong><code class="red28-variable">gasto_vcon</code></strong><br><code class="red28-variable">Vivienda</code> <code class="red28-variable">y</code> conservación</td>
+<td><code class="red28-variable">gasto_edre</code></td>
 <td>Monto mensual en moneda local corriente</td>
-<td>Agregado de vivienda y conservación según la encuesta. Identificar el alquiler, el mantenimiento y los servicios incluidos. Usar <code class="red28-variable">othhousing_exp</code> para el componente de reparación menor y conciliar con <code class="red28-variable">gasto_viv</code>.</td>
+<td>Gasto en educación y recreación.</td>
 </tr>
 <tr class="even">
-<td><strong><code class="red28-variable">gasto_vleca</code></strong><br>Leña <code class="red28-variable">y</code> carbón</td>
-<td>Monto mensual en moneda local corriente</td>
-<td>Subtotal monetario de leña y carbón para uso doméstico. Usar <code class="red28-variable">wood_exp</code> y <code class="red28-variable">coal_exp</code>, e incluir el carbón vegetal de <code class="red28-variable">othsol_exp</code> si se identifica por separado. Convertir a un período común y registrar la cobertura parcial.</td>
-</tr>
-<tr class="odd">
-<td><strong><code class="red28-variable">gasto_ens</code></strong><br><code class="red28-variable">Muebles</code> <code class="red28-variable">y</code> <code class="red28-variable">enseres</code></td>
-<td>Monto mensual en moneda local corriente</td>
-<td>Gasto en muebles, enseres y mantenimiento ordinario del hogar. Clasificar las partidas según el alcance de la encuesta y conciliar el mantenimiento de la vivienda con <code class="red28-variable">gasto_vcon</code> y <code class="red28-variable">othhousing_exp</code> para evitar duplicaciones.</td>
-</tr>
-<tr class="even">
-<td><strong><code class="red28-variable">gasto_sal</code></strong><br><code class="red28-variable">Salud</code></td>
-<td>Monto mensual en moneda local corriente</td>
-<td>Gasto del hogar en bienes y servicios de salud. Distinguir desembolsos del hogar, pagos de terceros y reembolsos según la boleta.</td>
-</tr>
-<tr class="odd">
-<td><strong><code class="red28-variable">gasto_edre</code></strong><br>Educación <code class="red28-variable">y</code> recreación</td>
-<td>Monto mensual en moneda local corriente</td>
-<td>Gasto en educación y recreación. Armonizar por separado los períodos y la cobertura de educación y recreación.</td>
-</tr>
-<tr class="even">
-<td><strong><code class="red28-variable">gasto_otros</code></strong><br><code class="red28-variable">Otros</code> <code class="red28-variable">bienes</code> <code class="red28-variable">y</code> <code class="red28-variable">servicios</code></td>
+<td><code class="red28-variable">gasto_otros</code></td>
 <td>Monto mensual en moneda local corriente</td>
 <td>Gasto residual en bienes y servicios según la clasificación de la encuesta. Identificar partidas compatibles y evitar duplicar rubros incluidos en otros agregados.</td>
 </tr>
